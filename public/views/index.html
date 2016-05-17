@@ -1,3 +1,47 @@
-<div ng-repeat="image in data">
-	<div class="col-xs-3"><img ng-src="{{image.images.standard_resolution.url}}" class="img-responsive"></div>
+<div class="out">
+
+	<div ng-show="tag != '' " class="event-container">
+		<h1>#{{tag}}</h1>
+	</div>
+
+	<div ng-show="tag != '' "class="instagram-image-container">
+		<ul rn-carousel rn-carousel-auto-slide="10" rn-carousel-transition="none" style="height:640px; width: 640px;">
+		  <li ng-repeat="image in data">
+	  		
+	  		<div class="user-container">
+		  		<img ng-src="{{image.user.profile_picture}}" class="profile-picture img-circle"> 
+		  		<div style='margin-left:60px;'>
+		  			<div class="profile-name">{{image.user.full_name}}</div>
+		  		</div>
+		  	</div>
+
+	  		<p class="image-caption">{{image.caption.text}}</p>
+
+	    	<img ng-src="{{image.images.standard_resolution.url}}" class="img-responsive">
+		  </li>
+		</ul>
+	</div>
+
+	<div class="settnigs-container">
+		<div class="row">
+			<div class="col-xs-6 pointer" ng-click="instagram.setTab(1)"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+			<div class="col-xs-6 pointer"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></div>
+		</div>
+		<div class="row">
+			<div ng-show="tab === 1" class="tab">
+				<h3>Search for a new hashtag</h3>
+
+				<hr>
+				<form class="form-inline">
+					<div class="input-group">
+						<span class="input-group-addon">#</span>
+						<input type="text" class="form-control" ng-model="tagSearch" placeholder="Choose hashtag">
+					</div>
+
+					<button class="btn btn-default" ng-click="instagram.setTag(tagSearch)">Search</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
 </div>

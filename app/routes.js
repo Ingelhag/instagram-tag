@@ -35,6 +35,5 @@ module.exports = function(app) {
 			if(medias == undefined) return res.json('Fail');
 			return res.json(medias);
 		});
-	})
-
+	});
 };

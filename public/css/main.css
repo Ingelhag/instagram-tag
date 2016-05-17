@@ -1,0 +1,64 @@
+.out{
+	width:100vw;
+	padding: 30px;
+}
+
+.event-container {
+	background-color: silver;
+	padding: 15px !important;
+	width: 670px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.instagram-image-container {
+	background-color: silver;
+	padding: 15px !important;
+	width: 670px;
+	height: auto;
+	margin: 20px auto 20px;
+}
+
+.settnigs-container{
+	background-color: silver;
+	padding: 15px !important;
+	width: 670px;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.user-container{
+	height:45px;
+	font-weight: bold;
+}
+.profile-picture {
+	float:left; 
+	height:45px;
+	width:45px; 
+}
+
+.profile-name {
+	margin-top: 15px;
+}
+
+.image-caption {
+	font-style: italic;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+.middle-button {
+	border-left: solid black;
+	border-right: solid black;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.tab {
+	margin-top: 15px;
+	padding: 15px;
+}

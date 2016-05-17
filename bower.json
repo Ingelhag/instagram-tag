@@ -1,0 +1,15 @@
+{
+  "name": "instagram-tag",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "angular": "1.5.0-rc.2",
+    "angular-route": "latest",
+    "angular-ui-router": "~0.2.15",
+    "angular-cookies": "~1.4.8",
+    "components-font-awesome": "~4.5.0"
+  },
+  "resolutions": {
+    "angular": "1.5.0-rc.2"
+  }
+}

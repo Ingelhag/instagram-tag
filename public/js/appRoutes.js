@@ -9,7 +9,14 @@ angular.module('appRoutes', []).config(['$stateProvider','$urlRouterProvider', f
     // Start page
     .state('home', {
       url: '/',
-      templateUrl: './views/'
+      templateUrl: './views/login.html'
+    })
+
+    .state('login', {
+      url: '/access',
+      templateUrl: './views/',
+      controller: 'instagramController',
+      controllerAs: 'instagram'
     });
 
 }]);

@@ -1,17 +1,9 @@
+'use strict';
+
 var api = require('instagram-node').instagram();
 api.use({ client_id: '6d90c568e3474ae1b00e14703ff6df9c', client_secret: '3bdd25fff7e345a6bd5f7e3ef2d31ed7' });
 
-module.exports = function(app, passport) {
-
-	// app.get('/auth/instagram', passport.authenticate('instagram', function(){
-	// 	scope: ['public_content','comments', 'relationships']
-	// }));
-
-	// app.get('/auth/instagram/callback', passport.authenticate('instagram', { failureRedirect: '/' }),
-	// 	function(req, res) {
-	// 	// Successful authentication, redirect home.
-	// 	res.redirect('/#/access');
-	// });
+module.exports = function(app) {
 
 	var redirect_uri = 'http://localhost:8000/auth/instagram/callback';
  

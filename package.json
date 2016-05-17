@@ -7,7 +7,7 @@
     "ejs": "^2.3.4",
     "express": "~4.5.1",
     "instagram-node": "^0.5.8",
-    "method-override": "~2.0.2",
+    "method-override": "~2.0.2"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

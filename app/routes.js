@@ -1,14 +1,15 @@
 'use strict';
 
 var api = require('instagram-node').instagram();
-api.use({ client_id: '6d90c568e3474ae1b00e14703ff6df9c', client_secret: '3bdd25fff7e345a6bd5f7e3ef2d31ed7' });
 
 module.exports = function(app) {
 
-	var redirect_uri = 'http://localhost:8000/auth/instagram/callback';
+	// var redirect_uri = 'http://localhost:8000/auth/instagram/callback';
+	var redirect_uri = 'https://serene-refuge-17732.herokuapp.com//auth/instagram/callback';
  
 	exports.authorize_user = function(req, res) {
-	  res.redirect(api.get_authorization_url(redirect_uri, { scope: ['public_content','comments', 'relationships'], state: 'a state' }));
+		api.use({ client_id: '6d90c568e3474ae1b00e14703ff6df9c', client_secret: '3bdd25fff7e345a6bd5f7e3ef2d31ed7' });
+		res.redirect(api.get_authorization_url(redirect_uri, { scope: ['public_content','comments', 'relationships'], state: 'a state' }));
 	};
 	 
 	exports.handleauth = function(req, res) {
@@ -28,6 +29,10 @@ module.exports = function(app) {
 	app.get('/auth/instagram', exports.authorize_user);
 	// This is your redirect URI 
 	app.get('/auth/instagram/callback', exports.handleauth);
+
+	app.get('/logout', function(req,res){
+		res.redirect('/');
+	});
 
 	app.get('/api/tag', function(req, res){
 

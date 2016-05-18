@@ -1,3 +1,7 @@
+a { color: inherit; } 
+
+a:hover { color: inherit; } 
+
 .out{
 	width:100vw;
 	padding: 30px;

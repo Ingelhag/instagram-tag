@@ -5,7 +5,7 @@ var api = require('instagram-node').instagram();
 module.exports = function(app) {
 
 	// var redirect_uri = 'http://localhost:8000/auth/instagram/callback';
-	var redirect_uri = 'https://serene-refuge-17732.herokuapp.com/auth/instagram/callback';
+	var redirect_uri = 'https://shareyourmoments.herokuapp.com/auth/instagram/callback';
  
 	exports.authorize_user = function(req, res) {
 		api.use({ client_id: '6d90c568e3474ae1b00e14703ff6df9c', client_secret: '3bdd25fff7e345a6bd5f7e3ef2d31ed7' });
